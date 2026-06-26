@@ -18,7 +18,16 @@ class MainLayout extends StatelessWidget {
 
       // SUR MOBILE : On affiche une AppBar pour avoir le bouton "Menu" (hamburger)
       appBar: isMobile
-          ? AppBar(title: const Text("GESTION STOCK"), elevation: 0)
+          ? AppBar(
+              title: const Text(
+                "GESTION STOCK",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+              elevation: 0,
+            )
           : null,
 
       body: Row(

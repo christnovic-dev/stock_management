@@ -18,8 +18,13 @@ class AppSidebar extends StatelessWidget {
           children: [
             const SizedBox(height: 50), // Un peu plus d'espace en haut
             const Text(
-              "GESTION STOCK",
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              "Gestion de stock",
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Poppins',
+                color: Colors.white,
+              ),
             ),
             const SizedBox(height: 40),
             _menu(context, Icons.dashboard, "Dashboard", '/'),

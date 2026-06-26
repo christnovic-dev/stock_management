@@ -141,8 +141,11 @@ class _CategoriesPageState extends State<CategoriesPage> {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
-      icon: const Icon(Icons.add),
-      label: const Text("Ajouter catégorie"),
+      icon: const Icon(Icons.add, color: Colors.white),
+      label: const Text(
+        "Ajouter catégorie",
+        style: TextStyle(color: Colors.white),
+      ),
     );
   }
 

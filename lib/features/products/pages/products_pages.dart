@@ -130,8 +130,11 @@ class _ProductsPageState extends State<ProductsPage> {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
-      icon: const Icon(Icons.add),
-      label: const Text("Ajouter un produit"),
+      icon: const Icon(Icons.add, color: Colors.white),
+      label: const Text(
+        "Ajouter un produit",
+        style: TextStyle(color: Colors.white),
+      ),
     );
   }
 

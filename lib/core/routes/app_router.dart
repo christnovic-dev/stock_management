@@ -6,50 +6,57 @@ import '../../features/categories/pages/category_page.dart';
 import '../../features/dashboard/pages/dashboard_page.dart';
 import '../../features/employes/pages/employes_pages.dart';
 import '../../features/products/pages/products_pages.dart';
+import '../../shared/widget/main_layout.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/',
   routes: [
-    GoRoute(
-      path: '/',
-      builder: (context, state) {
-        return const DashboardPage();
-      },
-    ),
+    ShellRoute(
+      builder: (context, state, child) => MainLayout(child: child),
 
-    GoRoute(
-      path: '/products',
-      builder: (context, state) {
-        return const ProductsPage();
-      },
-    ),
+      routes: [
+        GoRoute(
+          path: '/',
+          builder: (context, state) {
+            return const DashboardPage();
+          },
+        ),
 
-    GoRoute(
-      path: '/categories',
-      builder: (context, state) {
-        return const CategoriesPage();
-      },
-    ),
+        GoRoute(
+          path: '/products',
+          builder: (context, state) {
+            return const ProductsPage();
+          },
+        ),
 
-    GoRoute(
-      path: '/commandes',
-      builder: (context, state) {
-        return const OrdersPage();
-      },
-    ),
+        GoRoute(
+          path: '/categories',
+          builder: (context, state) {
+            return const CategoriesPage();
+          },
+        ),
 
-    GoRoute(
-      path: '/clients',
-      builder: (context, state) {
-        return const ClientPage();
-      },
-    ),
+        GoRoute(
+          path: '/commandes',
+          builder: (context, state) {
+            return const OrdersPage();
+          },
+        ),
 
-    GoRoute(
-      path: '/employes',
-      builder: (context, state) {
-        return const EmployesPage();
-      },
+        GoRoute(
+          path: '/clients',
+          builder: (context, state) {
+            return const ClientPage();
+          },
+        ),
+
+        GoRoute(
+          path: '/employes',
+          builder: (context, state) {
+            return const EmployesPage();
+          },
+        ),
+      ],
     ),
   ],
 );
